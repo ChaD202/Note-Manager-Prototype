@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='icon.png') }}"/>
+
+    <title>Notes</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="back">
+            <a href="/">Back</a>
+        </div>
+        <div class="header">
+            <h4 id="username">{{username}}'s Notes </h4>
+        </div>
+        <div class="settings">
+            <a href="/settings/{{ username }}">Settings</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="write">
+            <h3>Add a Note:</h3>
+            <form action="/notes/{{ username }}" method="POST">
+            <h4> Note: </h4>
+                <textarea rows="4" cols="50" name="note" autocomplete="off"></textarea>
+
+            <h4> Category: </h4>
+                <input name="category" autocomplete="off">
+
+            <br>
+            <input type="submit" value="Add Note" class="button"/>
+            </form>
+        </div>
+        {% for category in notes %}
+        <div class="category">
+            <h3>{{ category[0][2] }}</h3>
+            <div class="delete_category_button">
+                    <form action="/notes/{{ username }}" method="POST">
+                    <button type="submit" name="category_to_delete" value={{category[0][2]}}>Delete Category</button>
+                    </form>
+            </div>
+            {% for note in category %}
+            <div class="note">
+                <h4>{{ note[3] }}</h4>
+                <div class="delete_note_button">
+                    <form action="/notes/{{ username }}" method="POST">
+                    <button type="submit" name="id" value={{note[0]}}>Delete</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

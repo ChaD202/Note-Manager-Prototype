@@ -1,0 +1,138 @@
+/* Roboto Font */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/*
+color scheme
+
+black - rgb(0,0,0)
+dim grey - rgb(105,105,105)
+gray - rgb(128,128,128)
+dark grey - rgb(169,169,169)
+silver - rgb(192,192,192)
+*/
+
+/* login/register */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0,0,0)
+}
+
+#login_div {
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* margin is half of height/width + padding in order to centre div*/
+    margin-top: -160px;
+    margin-left: -110px;
+
+    padding: 10px;
+    background-color: rgb(105,105,105);
+    border-radius: 5px;
+}
+
+#error_div {
+    width: 200px;
+
+    margin-top: 10px;
+
+    padding: 10px;
+    background-color: rgb(105,105,105);
+    border-radius: 5px;
+}
+
+input[type='submit'] {
+    width: 175px;
+    margin-top: 15px;
+}
+
+/* notes */
+
+.nav {
+    display: flex;
+    align-content: baseline;
+    text-align: center;
+    height: 20px;
+
+    background-color: rgb(105,105,105);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
+}
+
+.back {
+    width: 20%;
+}
+
+.header {
+    width: 58%;
+}
+
+#username {
+    margin: 0;
+}
+
+.settings {
+    width: 20%;
+}
+
+.write {
+    background-color: rgb(128,128,128);
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
+}
+
+.category {
+    background-color: rgb(128,128,128);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
+    position: relative;
+}
+
+.note {
+    background-color: rgb(105,105,105);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
+}
+
+.delete_note_button {
+    background-color: rgb(192,192,192);
+    border-radius: 5px;
+    width: 4%;
+    padding: 2px;
+    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
+}
+
+.delete_category_button {
+    background-color: rgb(192,192,192);
+    border-radius: 5px;
+    width: 6%;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    padding: 2px;
+    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
+}
+
+.container {
+    margin-top: 10px;
+}
+
+/* settings */
+
+.password, .username {
+    background-color: rgb(128,128,128);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
+}
+
+
