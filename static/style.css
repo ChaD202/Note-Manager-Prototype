@@ -4,19 +4,39 @@
 /*
 color scheme
 
-black - rgb(0,0,0)
-dim grey - rgb(105,105,105)
-gray - rgb(128,128,128)
-dark grey - rgb(169,169,169)
-silver - rgb(192,192,192)
+black (text) - rgb(0,0,0)
+dim grey (div bg) - rgb(210, 210, 210)
+grey (div bg) - rgb(190, 190, 190)
+dark grey (button) - rgb(170, 170, 170)
 */
 
-/* login/register */
-
+/* text styling */
 * {
     font-family: 'Roboto', sans-serif;
     color: rgb(0,0,0)
 }
+
+/* button styling */
+button[type=submit], input[type=submit] {
+    background-color: rgb(170, 170, 170);
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+    border: none;
+    padding: 2px 6px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* text-area styling */
+textarea, input {
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+    border: none;
+    resize: none; /* gets rid of diagonal lines in bottom-left corner */
+}
+
+/* login/register */
 
 #login_div {
     height: 300px;
@@ -25,13 +45,14 @@ silver - rgb(192,192,192)
     top: 50%;
     left: 50%;
 
-    /* margin is half of height/width + padding in order to centre div*/
+    /* margin is half of height/width + padding in order to centre div */
     margin-top: -160px;
     margin-left: -110px;
 
     padding: 10px;
-    background-color: rgb(105,105,105);
-    border-radius: 5px;
+    background-color: rgb(210, 210, 210);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
 }
 
 #error_div {
@@ -40,12 +61,12 @@ silver - rgb(192,192,192)
     margin-top: 10px;
 
     padding: 10px;
-    background-color: rgb(105,105,105);
-    border-radius: 5px;
+    background-color: rgb(210, 210, 210);
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
 }
 
 input[type='submit'] {
-    width: 175px;
     margin-top: 15px;
 }
 
@@ -57,9 +78,9 @@ input[type='submit'] {
     text-align: center;
     height: 20px;
 
-    background-color: rgb(105,105,105);
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
+    background-color: rgb(210, 210, 210);
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
 }
 
 .back {
@@ -79,46 +100,39 @@ input[type='submit'] {
 }
 
 .write {
-    background-color: rgb(128,128,128);
-    border-radius: 5px;
+    background-color: rgb(210, 210, 210);
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
     padding: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
 }
 
 .category {
-    background-color: rgb(128,128,128);
-    border-radius: 5px;
+    background-color: rgb(210, 210, 210);
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
     padding: 5px;
     margin-top: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
     position: relative;
 }
 
 .note {
-    background-color: rgb(105,105,105);
-    border-radius: 5px;
+    background-color: rgb(190, 190, 190);
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
     padding: 5px;
     margin-top: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
 }
 
 .delete_note_button {
-    background-color: rgb(192,192,192);
-    border-radius: 5px;
     width: 4%;
     padding: 2px;
-    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
 }
 
 .delete_category_button {
-    background-color: rgb(192,192,192);
-    border-radius: 5px;
     width: 6%;
     position: absolute;
     top: 10px;
     right: 5px;
-    padding: 2px;
-    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
 }
 
 .container {
@@ -128,11 +142,11 @@ input[type='submit'] {
 /* settings */
 
 .password, .username {
-    background-color: rgb(128,128,128);
-    border-radius: 5px;
+    background-color: rgb(210, 210, 210);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+
     padding: 5px;
     margin-top: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.75);
 }
-
 
