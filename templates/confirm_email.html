@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename='style.css') }}" />
+    <link rel= "icon" href= "{{ url_for('static', filename='icon.png') }}"/>
+
+    <title> Email Confirmation </title>
+</head>
+<body>
+
+<div id="verification_div">
+{% if verified %}
+    <h4>Your account was verified successfully.</h4>
+    <a href="/"><button type="submit">Login</button></a>
+{% endif %}
+
+{% if not verified %}
+    <h4>Verification unsuccessful.</h4>
+{% endif %}
+</div>
+
+</body>
+</html>
+
